@@ -1,0 +1,53 @@
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="fullarmor" namespace="FullArmor.Policies.39F87E1E_3B48_4B93_AADB_DE96D7BD57AA" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="IntuneNetworkShareMapper" displayName="$(string.CAT_IntuneNetworkShareMapper)" />
+    <category name="Configuration" displayName="$(string.CAT_Configuration)">
+    <parentCategory ref="IntuneNetworkShareMapper"/>
+    </category>
+    <category name="Policy" displayName="$(string.CAT_Policy)">
+    <parentCategory ref="IntuneNetworkShareMapper"/>
+    </category>
+  </categories>
+  <policies>
+    <policy name="Enabled" class="User" displayName="$(string.POL_Enabled)" explainText="$(string.POL_Enabled_Help)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="Enabled">
+      <parentCategory ref="Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="RefreshInterval" class="User" displayName="$(string.POL_RefreshInterval)" presentation="$(presentation.POL_RefreshInterval)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="RefreshInterval">
+      <parentCategory ref="Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <decimal id="RefreshInterval" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="RefreshInterval" required="true" minValue="1" maxValue="100000" />
+      </elements>
+    </policy>
+    <policy name="MapPersistent" class="User" displayName="$(string.POL_BF4F2902_5773_409D_93BC_F3C585D53ADF)" explainText="$(string.POL_PERSISTENT_Help)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="MapPersistent">
+      <parentCategory ref="Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="NetworkDriveMappings" class="User" displayName="$(string.POL_NetworkDriveMappings)" presentation="$(presentation.POL_NetworkDriveMappings)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="Policies">
+      <parentCategory ref="Policy" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <list id="NetworkDriveMappingsList" key="Software\Policies\weatherlights.com\NetworkDriveMapping\Policies" valuePrefix="" />
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>
