@@ -9,6 +9,7 @@ Sign in to the Microsoft Store for Business and approve the Intune Network Drive
 The Network Drive Mapping App will register itself as an automatic startup app. However the autostart is disabled as long as the app has not been started at least once or has an explicit permission. To grant the app an explicit permission we need to setup a Restriction profile in Microsoft Intune.
 
 You can create a new restriction profile or use an existing one. To permit the app you have to go into the App Store section and enter the following value to the startup apps textarea: <em>HaukeGtze.IntuneNetworkDriveMapping_6bk20wvc8rfx2</em>
+<img src="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/7279c1542c8f514511c25afbfe58b4bd7061d54c/Documentation/img/configurestartup.png" alt="Configure startup app"/>
 
 ### Setup the ADMX-Template
 Next you need to download and install the ADMX-Template using ADMX-Ingestion. To do this follow these simple steps:
