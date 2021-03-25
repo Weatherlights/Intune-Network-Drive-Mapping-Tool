@@ -5,10 +5,15 @@ Sign in to the Microsoft Store for Business and approve the Intune Network Drive
 
 <a href="https://businessstore.microsoft.com/store/details/networkdrivemapping/9NWVZR414XS6"><img src="https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png" alt="Get it from Microsoft" width="280"/></a>
 
+### Assign the App from Microsoft Intune
+
+Once the App is synchronized to Microsoft Intune you can assign it as required.
+
 ### Setup Autostart
 The Network Drive Mapping App will register itself as an automatic startup app. However the autostart is disabled as long as the app has not been started at least once or has an explicit permission. To grant the app an explicit permission we need to setup a Restriction profile in Microsoft Intune.
 
 You can create a new restriction profile or use an existing one. To permit the app you have to go into the App Store section and enter the following value to the startup apps textarea: <em>HaukeGtze.IntuneNetworkDriveMapping_6bk20wvc8rfx2</em>
+<img src="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/7279c1542c8f514511c25afbfe58b4bd7061d54c/Documentation/img/configurestartup.png" alt="Configure startup app"/>
 
 ### Setup the ADMX-Template
 Next you need to download and install the ADMX-Template using ADMX-Ingestion. To do this follow these simple steps:
@@ -28,6 +33,7 @@ To configure the Intune Network Drive Mapping you can create a new Windows 10 cu
    <tr><td>./User/Vendor/MSFT/Policy/Config/weatherlights~Policy~IntuneNetworkShareMapper~Configuration/RefreshInterval</td><td>Sets the refresh interval.</td><td>9000</td><td>&lt;enabled/&gt; or &lt;data id="RefreshInterval" value="9000"/&gt;</td></tr>
    <tr><td>./User/Vendor/MSFT/Policy/Config/weatherlightscom~Policy~IntuneNetworkShareMapper~Configuration/MapPersistent</td><td>Specifies if the network drive should be mapped persistence. Setting this value can increase reliability but is otherwise not needed.</td><td>Disabled</td><td>&lt;enabled/&gt; or &lt;disabled/&gt;</td></tr>
    <tr><td>./User/Vendor/MSFT/Policy/Config/weatherlights~Policy~IntuneNetworkShareMapper~Policy/NetworkDriveMappings</td><td>With this entry you define what network shares you would like to map. You need to specify this as followed: &lt;NUMMER DES EINTRAG&gt;&amp;#xF000;&lt;LAUFWERKBUCHSTABE&gt;;&lt;NETZWERKPFAD&gt;&amp;#xF000; With &amp;#xF000; a new line can be added.</td><td></td><td>&lt;enabled/&gt;&lt;data id="NetworkDriveMappingsList" value="1&amp;#xF000;P; \\server1.domain.local\share2&amp;#xF000;2&amp;#xF000;F;\\server1.domain.local\share1"/&gt;</td></tr></table>
+   <img src="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/27749ebfe8da8cdb6807b0b1c04d4aa1b9abfe4f/Documentation/img/editrow.png" alt="Adding a row"/>
 
 ### How does the Tool work
 This is how the Intune Network Drive Mapping checks for new drives:
