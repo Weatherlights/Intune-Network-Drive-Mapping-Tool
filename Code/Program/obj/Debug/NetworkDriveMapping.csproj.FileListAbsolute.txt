@@ -1,0 +1,9 @@
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.csprojAssemblyReference.cache
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.NetworkDriveMappingService.resources
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.csproj.GenerateResource.cache
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\bin\Debug\NetworkDriveMapping.exe.config
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\bin\Debug\NetworkDriveMapping.exe
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\bin\Debug\NetworkDriveMapping.pdb
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.exe
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.pdb
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkDriveMapping\NetworkDriveMapping\obj\Debug\NetworkDriveMapping.ProjectInstaller.resources
