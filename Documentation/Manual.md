@@ -21,7 +21,7 @@ Next you need to download and install the ADMX-Template using ADMX-Ingestion. To
 2. Add a new entry to this profile and fill in the values as followed:
 3. For name use <em>Intune Network Drive Mapping ADMX-Ingestion</em>.
 4. For the OMA-URI you enter the value ./Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/weatherlights/Policy/IntuneNetworkDriveMapper
-5. As value you copy and paste the content of the <a href="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/fc2196719d98263e91a426bac497ba04ad8906ee/ADMX-Template.admx>ADMX file</a>.
+5. As value you copy and paste the content of the <a href="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/fc2196719d98263e91a426bac497ba04ad8906ee/ADMX-Template.admx">ADMX file</a>.
 6. Confirm the entry.
 
 You can now proceed by saving the profile read the next section about configuration and add those values to the profile aswell.
