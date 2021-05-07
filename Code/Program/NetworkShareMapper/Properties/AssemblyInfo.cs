@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("NetworkDriveMapping")]
+[assembly: AssemblyTitle("NetworkShareMapper")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("direkt-gruppe GmbH")]
-[assembly: AssemblyProduct("NetworkDriveMapping")]
+[assembly: AssemblyProduct("NetworkShareMapper")]
 [assembly: AssemblyCopyright("Copyright © direkt-gruppe GmbH 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Die folgende GUID bestimmt die ID der Typbibliothek, wenn dieses Projekt für COM verfügbar gemacht wird
-[assembly: Guid("bbdca7ee-86de-4509-8242-c9381660d290")]
+[assembly: Guid("633e7b1e-c2e6-4967-b0d5-f64093f29fa2")]
 
 // Versionsinformationen für eine Assembly bestehen aus den folgenden vier Werten:
 //

@@ -1,0 +1,7 @@
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\bin\Debug\NetworkShareMapper.exe.config
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\bin\Debug\NetworkShareMapper.exe
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\bin\Debug\NetworkShareMapper.pdb
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Debug\NetworkShareMapper.csprojAssemblyReference.cache
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Debug\NetworkShareMapper.exe
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Debug\NetworkShareMapper.pdb
+C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.CoreCompileInputs.cache

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetworkDriveMapping
+namespace NetworkShareMapper
 {
     public class DriveSettings
     {
@@ -68,6 +69,12 @@ namespace NetworkDriveMapping
         private static extern int WNetCancelConnection2
             (string sLocalName, uint iFlags, int iForce);
 
+        [DllImport("mpr.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        public static extern int WNetGetConnection(
+    [MarshalAs(UnmanagedType.LPTStr)] string localName,
+    [MarshalAs(UnmanagedType.LPTStr)] StringBuilder remoteName,
+    ref int length);
+
         public static void MapNetworkDrive(string sDriveLetter, string sNetworkPath, bool isPersistent)
         {
             //Checks if the last character is \ as this causes error on mapping a drive.
@@ -87,7 +94,8 @@ namespace NetworkDriveMapping
             //mapping before adding the new mapping
             if (IsDriveMapped(sDriveLetter))
             {
-                DisconnectNetworkDrive(sDriveLetter, true);
+                if (GetMappedDriveLocation(sDriveLetter) != sNetworkPath )
+                    DisconnectNetworkDrive(sDriveLetter, true);
             }
 
             WNetAddConnection2(ref oNetworkResource, null, null, 0);
@@ -103,6 +111,17 @@ namespace NetworkDriveMapping
             {
                 return WNetCancelConnection2(sDriveLetter + ":", 0, 0);
             }
+        }
+
+        public static string GetMappedDriveLocation(string sDriveLetter)
+        {
+            var sb = new StringBuilder(512);
+            var size = sb.Capacity;
+            var error = WNetGetConnection(sDriveLetter + ":", sb, ref size);
+            if (error != 0)
+                throw new Win32Exception(error, "WNetGetConnection failed");
+            string networkpath = sb.ToString();
+            return networkpath;
         }
 
         public static bool IsDriveMapped(string sDriveLetter)

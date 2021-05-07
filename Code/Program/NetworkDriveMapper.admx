@@ -1,0 +1,48 @@
+﻿<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="fullarmor" namespace="FullArmor.Policies.74ABB015_4459_47C2_8DF0_B99428A3920D" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+  <supersededAdm fileName="" />
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="CAT_Configuration" displayName="$(string.CAT_Configuration)" />
+    <category name="CAT_Policy" displayName="$(string.CAT_Policy)" />
+  </categories>
+  <policies>
+    <policy name="POL_Enabled" class="User" displayName="$(string.POL_Enabled)" explainText="$(string.POL_Enabled_Help)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="Enabled">
+      <parentCategory ref="CAT_Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="POL_RefreshInterval" class="User" displayName="$(string.POL_RefreshInterval)" presentation="$(presentation.POL_RefreshInterval)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="RefreshInterval">
+      <parentCategory ref="CAT_Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <text id="TXT_RefreshInterval" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="RefreshInterval" required="true" maxLength="10" />
+      </elements>
+    </policy>
+    <policy name="POL_PERSISTENT" class="User" displayName="$(string.POL_BF4F2902_5773_409D_93BC_F3C585D53ADF)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="MapPersistent">
+      <parentCategory ref="CAT_Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <enabledValue>
+        <decimal value="1"/>
+      </enabledValue>
+      <disabledValue>
+        <decimal value="0"/>
+      </disabledValue>
+    </policy>
+    <policy name="POL_NetworkDriveMappings" class="User" displayName="$(string.POL_NetworkDriveMappings)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="Policies">
+      <parentCategory ref="CAT_Policy" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <list id="LST_NetworkDriveMappings" key="Software\Policies\weatherlights.com\NetworkDriveMapping\Policies" valuePrefix=""/>
+      </elements>
+    </policy>
+  </policies>
+</policyDefinitions>
