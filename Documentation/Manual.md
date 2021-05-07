@@ -7,7 +7,7 @@ Sign in to the Microsoft Store for Business and approve the Intune Network Drive
 
 ### Assign the App from Microsoft Intune
 
-Once the App is synchronized to Microsoft Intune you can assign it as required.
+Once the App is synchronized to the Microsoft Intune Apps you can assign it as required.
 
 ### Setup Autostart
 The Network Drive Mapping App will register itself as an automatic startup app. However the autostart is disabled as long as the app has not been started at least once or has an explicit permission. To grant the app an explicit permission we need to setup a Restriction profile in Microsoft Intune.
