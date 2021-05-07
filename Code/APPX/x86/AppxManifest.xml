@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package IgnorableNamespaces="build uap rescap rescap3 desktop" xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:build="http://schemas.microsoft.com/developer/appx/2015/build" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" xmlns:rescap3="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10">
+  <Identity Name="HaukeGtze.IntuneNetworkDriveMapping" ProcessorArchitecture="x86" Publisher="CN=BFF8D712-89E6-4205-9504-3AB824A94414" Version="1.0.4.0"/>
+  <Resources>
+    <Resource uap:Scale="100"/>
+    <Resource uap:Scale="150"/>
+    <Resource Language="en-US"/>
+    <Resource Language="de-DE"/>
+  </Resources>
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+  <Properties>
+    <PublisherDisplayName>ms-resource:PublisherDisplayName</PublisherDisplayName>
+    <DisplayName>ms-resource:DisplayName</DisplayName>
+    <Logo>Assets\Store50x50Logo.png</Logo>
+  </Properties>
+  <Applications>
+    <Application EntryPoint="Windows.FullTrustApplication" Executable="AI_STUBS\AiStub.exe" Id="NetworkShareMapper.exe">
+      <uap:VisualElements BackgroundColor="black" Description="ms-resource:VisualElements.Description" DisplayName="ms-resource:VisualElements.DisplayName" Square150x150Logo="Assets\NetworkShareMapper.exeSquare150x150Logo.png" Square44x44Logo="Assets\NetworkShareMapper.exeSquare44x44Logo.png">
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait"/>
+          <uap:Rotation Preference="landscape"/>
+        </uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Assets\NetworkShareMapper.exeSquare71x71Logo.png"/>
+      </uap:VisualElements>
+      <Extensions>
+        <rescap3:Extension Category="windows.desktopAppMigration" EntryPoint="Windows.FullTrustApplication" Executable="NetworkShareMapper.exe">
+          <rescap3:DesktopAppMigration>
+            <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\Intune Network Drive Mapping\NetworkShareMapper.exe.lnk"/>
+            <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Intune Network Drive Mapping\NetworkShareMapper.exe.lnk"/>
+          </rescap3:DesktopAppMigration>
+        </rescap3:Extension>
+        <desktop:Extension Category="windows.startupTask" EntryPoint="Windows.FullTrustApplication" Executable="NetworkShareMapper.exe">
+          <desktop:StartupTask DisplayName="ms-resource:StartupTask.DisplayName" Enabled="true" TaskId="NetworkShareMapper.exe"/>
+        </desktop:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Dependencies>
+    <TargetDeviceFamily MaxVersionTested="10.0.18363.0" MinVersion="10.0.10240.0" Name="Windows.Desktop"/>
+  </Dependencies>
+  <build:Metadata>
+    <build:Item Name="OperatingSystem" Version="10.0.18362.718"/>
+    <build:Item Name="AdvancedInstaller" Version="16.9 (d24925f7)"/>
+    <build:Item Name="ProjectLicenseType" Version="express"/>
+    <build:Item Name="SignTool.exe" Version="10.0.18362.1"/>
+    <build:Item Name="MakePri.exe" Version="10.0.18362.1"/>
+  </build:Metadata>
+</Package>
