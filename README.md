@@ -7,4 +7,4 @@ Map on-premises network shares with Intune and the Microsoft Store for Business
 
 ### How do I configure it?
 
-Check the <a href="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/main/Documentation/Manual.md">Manual</a>. It is quiet easy :).
+Check the <a href="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/blob/main/Documentation/Manual.md">Manual</a>. It is quite easy :).
