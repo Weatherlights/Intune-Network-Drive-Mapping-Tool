@@ -4,3 +4,11 @@ C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\Net
 C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Release\NetworkShareMapper.exe
 C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Release\NetworkShareMapper.pdb
 C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\NetworkShareMapper\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.CoreCompileInputs.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.exe.config
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.exe
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.pdb
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.AssemblyReference.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.SuggestedBindingRedirects.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.CoreCompileInputs.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.exe
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.pdb

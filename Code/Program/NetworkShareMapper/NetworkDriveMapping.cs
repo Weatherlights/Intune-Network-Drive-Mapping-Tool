@@ -43,7 +43,7 @@ namespace NetworkShareMapper
                             if (policy.driveLetter != null && policy.uncPath != null)
                                 try
                                 {
-                                    DriveSettings.MapNetworkDrive(policy.driveLetter, policy.uncPath, isMapPersistent);
+                                    DriveSettings.MapNetworkDrive(policy.driveLetter, policy.uncPath, isMapPersistent, policy.Username, policy.Password);
                                 }
                                 catch (Exception e)
                                 {

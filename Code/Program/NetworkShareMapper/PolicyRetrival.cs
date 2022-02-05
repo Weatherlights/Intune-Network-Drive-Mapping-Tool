@@ -35,9 +35,14 @@ namespace NetworkShareMapper
             string[] myPolicyValueArray = myPolicyValue.Split(';');
             if (myPolicyValueArray.Length > 1)
             {
-                policy.driveLetter = myPolicyValue.Split(';')[0];
-                string myPathWithVariables = myPolicyValue.Split(';')[1];
+                policy.driveLetter = myPolicyValueArray[0];
+                string myPathWithVariables = myPolicyValueArray[1];
                 policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
+                if (myPolicyValueArray.Length > 3)
+                {
+                    policy.Username = myPolicyValueArray[2];
+                    policy.Password = myPolicyValueArray[3];
+                }
             }
             return policy;
             
@@ -47,9 +52,14 @@ namespace NetworkShareMapper
         {
             try
             {
-                int value = (int)policyStoreKey.GetValue("Enabled");
-                if (value > 0)
-                    return true;
+                if (policyStoreKey.GetValueNames().Contains("Enabled"))
+                {
+                    int value = (int)policyStoreKey.GetValue("Enabled");
+                    if (value > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else
                     return false;
             } catch (Exception e)
@@ -62,9 +72,14 @@ namespace NetworkShareMapper
         {
             try
             {
-                int value = (int)policyStoreKey.GetValue("MapPersistent");
-                if (value > 0)
-                    return true;
+                if (policyStoreKey.GetValueNames().Contains("MapPersistent"))
+                {
+                    int value = (int)policyStoreKey.GetValue("MapPersistent");
+                    if (value > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else
                     return false;
             }
@@ -78,7 +93,10 @@ namespace NetworkShareMapper
         {
             try
             {
-                return (int)policyStoreKey.GetValue("RefreshInterval");
+                if (policyStoreKey.GetValueNames().Contains("RefreshInterval"))
+                    return (int)policyStoreKey.GetValue("RefreshInterval");
+                else
+                    return 10000;
             }
             catch (Exception e)
             {
@@ -90,7 +108,10 @@ namespace NetworkShareMapper
         {
             try
             {
-                return (int)policyStoreKey.GetValue("RetryCount");
+                if (policyStoreKey.GetValueNames().Contains("RetryCount"))
+                    return (int)policyStoreKey.GetValue("RetryCount");
+                else
+                    return 15;
             }
             catch (Exception e)
             {
@@ -102,11 +123,16 @@ namespace NetworkShareMapper
         {
             try
             {
-                int value = (int)policyStoreKey.GetValue("NetworkTestEnabled");
-                if (value > 0)
-                    return true;
+                if (policyStoreKey.GetValueNames().Contains("NetworkTestEnabled"))
+                {
+                    int value = (int)policyStoreKey.GetValue("NetworkTestEnabled");
+                    if (value > 0)
+                        return true;
+                    else
+                        return false;
+                }
                 else
-                    return false;
+                    return true;
             }
             catch (Exception e)
             {

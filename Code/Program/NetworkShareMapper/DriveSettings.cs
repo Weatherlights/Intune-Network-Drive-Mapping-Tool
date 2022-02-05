@@ -75,7 +75,8 @@ namespace NetworkShareMapper
     [MarshalAs(UnmanagedType.LPTStr)] StringBuilder remoteName,
     ref int length);
 
-        public static void MapNetworkDrive(string sDriveLetter, string sNetworkPath, bool isPersistent)
+
+        public static void MapNetworkDrive(string sDriveLetter, string sNetworkPath, bool isPersistent, string Username, string Password)
         {
             //Checks if the last character is \ as this causes error on mapping a drive.
             if (sNetworkPath.Substring(sNetworkPath.Length - 1, 1) == @"\")
@@ -98,7 +99,7 @@ namespace NetworkShareMapper
                     DisconnectNetworkDrive(sDriveLetter, true);
             }
 
-            WNetAddConnection2(ref oNetworkResource, null, null, 0);
+            WNetAddConnection2(ref oNetworkResource, Username, Password, 0);
         }
 
         public static int DisconnectNetworkDrive(string sDriveLetter, bool bForceDisconnect)

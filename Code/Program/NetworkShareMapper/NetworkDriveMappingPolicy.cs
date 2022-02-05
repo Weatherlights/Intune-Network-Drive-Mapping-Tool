@@ -10,5 +10,7 @@ namespace NetworkShareMapper
     {
         public string driveLetter;
         public string uncPath;
+        public string Username;
+        public string Password;
     }
 }
