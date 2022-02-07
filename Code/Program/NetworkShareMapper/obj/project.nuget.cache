@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "tIyLXVQXd+Xp9iK69PECgSVXMTg25IgbCAf+zMHeTAWdYN5P1BQvcLt+YUMiWySwuCc0T2Ag2aTAvZGkTIN31A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hauke\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.22000.196\\microsoft.windows.sdk.contracts.10.0.22000.196.nupkg.sha512",
+    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512",
+    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.7.0\\system.runtime.windowsruntime.ui.xaml.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

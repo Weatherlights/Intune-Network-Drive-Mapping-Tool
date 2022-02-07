@@ -31,17 +31,20 @@ namespace NetworkShareMapper
             if ( policyPolicyKey == null )
                 policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies");
             NetworkDriveMappingPolicy policy = new NetworkDriveMappingPolicy();
-            string myPolicyValue = (string)policyPolicyKey.GetValue(name);
-            string[] myPolicyValueArray = myPolicyValue.Split(';');
-            if (myPolicyValueArray.Length > 1)
+            if (policyPolicyKey.GetValueNames().Contains(name) )
             {
-                policy.driveLetter = myPolicyValueArray[0];
-                string myPathWithVariables = myPolicyValueArray[1];
-                policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
-                if (myPolicyValueArray.Length > 3)
+                string myPolicyValue = (string)policyPolicyKey.GetValue(name);
+                string[] myPolicyValueArray = myPolicyValue.Split(';');
+                if (myPolicyValueArray.Length > 1)
                 {
-                    policy.Username = myPolicyValueArray[2];
-                    policy.Password = myPolicyValueArray[3];
+                    policy.driveLetter = myPolicyValueArray[0];
+                    string myPathWithVariables = myPolicyValueArray[1];
+                    policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
+                    if (myPolicyValueArray.Length > 3)
+                    {
+                        policy.Username = myPolicyValueArray[2];
+                        policy.Password = myPolicyValueArray[3];
+                    }
                 }
             }
             return policy;

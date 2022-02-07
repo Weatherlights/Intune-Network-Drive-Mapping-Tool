@@ -75,9 +75,11 @@ namespace NetworkShareMapper
     [MarshalAs(UnmanagedType.LPTStr)] StringBuilder remoteName,
     ref int length);
 
+        
 
         public static void MapNetworkDrive(string sDriveLetter, string sNetworkPath, bool isPersistent, string Username, string Password)
         {
+            LogWriter myLogWriter = new LogWriter("DriveSettings");
             //Checks if the last character is \ as this causes error on mapping a drive.
             if (sNetworkPath.Substring(sNetworkPath.Length - 1, 1) == @"\")
             {
@@ -95,8 +97,14 @@ namespace NetworkShareMapper
             //mapping before adding the new mapping
             if (IsDriveMapped(sDriveLetter))
             {
-                if (GetMappedDriveLocation(sDriveLetter) != sNetworkPath )
+                if (GetMappedDriveLocation(sDriveLetter) != sNetworkPath)
+                {
+                    myLogWriter.LogWrite("The mapped drive on " + sDriveLetter + " is not " + sNetworkPath + ". Will reconnect.");
                     DisconnectNetworkDrive(sDriveLetter, true);
+                }
+            } else
+            {
+                myLogWriter.LogWrite("Will now connect " + sDriveLetter + " to " + sNetworkPath);
             }
 
             WNetAddConnection2(ref oNetworkResource, Username, Password, 0);
