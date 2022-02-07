@@ -1,5 +1,14 @@
 # Intune-Network-Drive-Mapping-Tool
-Map on-premises network shares with Intune and the Microsoft Store for Business
+Map on-premises network shares with Intune and the Microsoft Store for Business.
+
+## Features
+- Maps any network path to a drive letter
+- No error messages when using Autoconnect VPN
+- Connects drives when connection is available (can detect network changes)
+- Updates/deletes drives if they change or are not needed anylonger
+- Supports custom username/password for shared accounts
+- Supports ENV variables
+- Automatic updates
 
 ## Where do I get the tool?
 
