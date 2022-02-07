@@ -60,14 +60,14 @@ namespace NetworkShareMapper
                                     }
                                     catch (Exception e)
                                     {
-                                        myLogWriter.LogWrite("Failed to map networkdrive " + policy.driveLetter + " to " + policy.uncPath + "\nException: " + e.Message + "\n" + e.StackTrace,2);
+                                        myLogWriter.LogWrite("Failed to map networkdrive " + policy.driveLetter + " to " + policy.uncPath + "\nException: " + e.ToString(), 2);
                                         // do nothing
                                     }
                             }
                         }
                         catch (Exception e)
                         {
-                            myLogWriter.LogWrite("An unknown error occured.\nException: " + e.Message + "\n" + e.StackTrace, 3);
+                            myLogWriter.LogWrite("An unknown error occured.\nException: " + e.ToString(), 3);
                         }
                     retryCount--;
                 } else
