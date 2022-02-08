@@ -12,16 +12,18 @@ namespace NetworkShareMapper
         private PolicyRetrival myPolicyRetrival = null;
         private UpdateHandler myUpdateHandler = null;
         private LogWriter myLogWriter = null;
+        private bool isStartedFromStartmenu = false;
 
-        public NetworkDriveMapping()
+        public NetworkDriveMapping(PolicyRetrival policyRetrival)
         {
-            myPolicyRetrival = new PolicyRetrival();
+            myPolicyRetrival = policyRetrival;
             myUpdateHandler = new UpdateHandler();
             myLogWriter = new LogWriter("NetworkDriveMapping");
         }
 
         public void Execute()
         {
+
             NetworkChangeDetector myNetworkChangeDetector = new NetworkChangeDetector();
             myLogWriter.LogWrite("Initialized NetworkChangeDetector");
             Task updateTask = new Task(myUpdateHandler.InstallUpdate);

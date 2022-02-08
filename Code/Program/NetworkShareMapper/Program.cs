@@ -9,11 +9,18 @@ namespace NetworkShareMapper
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            NetworkDriveMapping myNetworkDriveMapping = new NetworkDriveMapping();
+            PolicyRetrival myPolicyRetrival = new PolicyRetrival();
+            if (!myPolicyRetrival.isEnabled() && args.Contains("Startmenu"))
+            {
+                UnconfiguredNoticeWindow myUnconfiguredNoticeWindow = new UnconfiguredNoticeWindow();
+                myUnconfiguredNoticeWindow.ShowDialog();
+            }
 
-                myNetworkDriveMapping.Execute();
+            NetworkDriveMapping myNetworkDriveMapping = new NetworkDriveMapping(myPolicyRetrival);
+            myNetworkDriveMapping.Execute();
             
         }
     }

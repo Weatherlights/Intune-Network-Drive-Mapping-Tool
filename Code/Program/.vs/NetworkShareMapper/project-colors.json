@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "633e7b1e-c2e6-4967-b0d5-f64093f29fa2": {
+      "ProjectGuid": "633e7b1e-c2e6-4967-b0d5-f64093f29fa2",
+      "DisplayName": "NetworkShareMapper",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Sonstige Dateien",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

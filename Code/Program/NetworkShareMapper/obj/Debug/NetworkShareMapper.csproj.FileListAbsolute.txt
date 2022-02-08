@@ -8,8 +8,12 @@ C:\Users\hauke\OneDrive - weatherlights.com\Documents\Developing\wcommsixrun\Net
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Debug\NetworkShareMapper.exe.config
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Debug\NetworkShareMapper.exe
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Debug\NetworkShareMapper.pdb
-C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.AssemblyReference.cache
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.SuggestedBindingRedirects.cache
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.CoreCompileInputs.cache
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.exe
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.pdb
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\UnconfiguredNoticeWindow.g.cs
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper_MarkupCompile.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper_MarkupCompile.lref
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\UnconfiguredNoticeWindow.baml
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.g.resources

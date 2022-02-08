@@ -1,0 +1,20 @@
+﻿<Window x:Class="NetworkShareMapper.UnconfiguredNoticeWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NetworkShareMapper"
+             mc:Ignorable="d" 
+
+        Name="winUnconfiguredNoticeWindow" Height="300" Width="500" ResizeMode="CanMinimize" Title="Intune Network Drive mapping is not ready." Visibility="Visible" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Name="lblHeading" Content="Intune Network Drive mapping is not ready yet." HorizontalAlignment="Left" Margin="50,40,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="400"/>
+        <TextBlock Name="lblMessage" TextWrapping="Wrap" Text="We haven't received an active configuration from the device management yet.&#10;&#10;If you are an administrator you should check your Intune configuration and assign an active profile to this device." HorizontalAlignment="Left" Height="98" Margin="50,76,0,0" VerticalAlignment="Top" Width="400" IsEnabled="False" TextAlignment="Left"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="350,180,0,0" VerticalAlignment="Top" Height="28" Width="100" IsCancel="True" IsDefault="True" Click="Button_Click"/>
+        <Label Height="28" Margin="50,180,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="lblAdminGuide">
+            <Hyperlink RequestNavigate="Hyperlink_RequestNavigate" NavigateUri="https://github.com/Weatherlights/Intune-Network-Drive-Mapping-Tool/wiki">
+                Administrator documentation
+            </Hyperlink>
+        </Label>
+    </Grid>
+</Window>
