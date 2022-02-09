@@ -51,11 +51,21 @@ namespace NetworkShareMapper
             
         }
 
+        private bool TestRegistryKeyValue(string AttributeName)
+        {
+            if (policyStoreKey != null)
+                if (policyStoreKey.GetValueNames().Contains(AttributeName))
+                    return true;
+            return false;
+        }
+
+
         public bool isEnabled()
         {
+            
             try
             {
-                if (policyStoreKey.GetValueNames().Contains("Enabled"))
+                if (TestRegistryKeyValue("Enabled")) 
                 {
                     int value = (int)policyStoreKey.GetValue("Enabled");
                     if (value > 0)
@@ -75,7 +85,7 @@ namespace NetworkShareMapper
         {
             try
             {
-                if (policyStoreKey.GetValueNames().Contains("MapPersistent"))
+                if (TestRegistryKeyValue("MapPersistent"))
                 {
                     int value = (int)policyStoreKey.GetValue("MapPersistent");
                     if (value > 0)
@@ -96,7 +106,7 @@ namespace NetworkShareMapper
         {
             try
             {
-                if (policyStoreKey.GetValueNames().Contains("RefreshInterval"))
+                if (TestRegistryKeyValue("RefreshInterval"))
                     return (int)policyStoreKey.GetValue("RefreshInterval");
                 else
                     return 10000;
@@ -111,7 +121,7 @@ namespace NetworkShareMapper
         {
             try
             {
-                if (policyStoreKey.GetValueNames().Contains("RetryCount"))
+                if (TestRegistryKeyValue("RetryCount"))
                     return (int)policyStoreKey.GetValue("RetryCount");
                 else
                     return 15;
@@ -126,7 +136,7 @@ namespace NetworkShareMapper
         {
             try
             {
-                if (policyStoreKey.GetValueNames().Contains("NetworkTestEnabled"))
+                if (TestRegistryKeyValue("NetworkTestEnabled"))
                 {
                     int value = (int)policyStoreKey.GetValue("NetworkTestEnabled");
                     if (value > 0)

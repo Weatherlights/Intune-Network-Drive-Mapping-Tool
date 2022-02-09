@@ -16,3 +16,15 @@ C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShar
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper_MarkupCompile.lref
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\UnconfiguredNoticeWindow.baml
 C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.g.resources
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.exe.config
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.exe
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\Release\NetworkShareMapper.pdb
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.SuggestedBindingRedirects.cache
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\UnconfiguredNoticeWindow.g.cs
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper_MarkupCompile.cache
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper_MarkupCompile.lref
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\UnconfiguredNoticeWindow.baml
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.g.resources
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.csproj.CoreCompileInputs.cache
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.exe
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\NetworkShareMapper.pdb

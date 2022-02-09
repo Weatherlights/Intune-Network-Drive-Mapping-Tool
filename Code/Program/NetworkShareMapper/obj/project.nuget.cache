@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tIyLXVQXd+Xp9iK69PECgSVXMTg25IgbCAf+zMHeTAWdYN5P1BQvcLt+YUMiWySwuCc0T2Ag2aTAvZGkTIN31A==",
+  "dgSpecHash": "14XYmimRxm0o+1aE+X4QPXtdBqn447c4x6D53r92prDTZiGuKAnFfxpAOesDggJRQ6V96NRk5XMc9sMhL9NG7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+  "projectFilePath": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hauke\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.22000.196\\microsoft.windows.sdk.contracts.10.0.22000.196.nupkg.sha512",
-    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
-    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512",
-    "C:\\Users\\hauke\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.7.0\\system.runtime.windowsruntime.ui.xaml.4.7.0.nupkg.sha512"
+    "C:\\Users\\HaukeGötze\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.22000.196\\microsoft.windows.sdk.contracts.10.0.22000.196.nupkg.sha512",
+    "C:\\Users\\HaukeGötze\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\HaukeGötze\\.nuget\\packages\\system.runtime.windowsruntime\\4.7.0\\system.runtime.windowsruntime.4.7.0.nupkg.sha512",
+    "C:\\Users\\HaukeGötze\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.7.0\\system.runtime.windowsruntime.ui.xaml.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

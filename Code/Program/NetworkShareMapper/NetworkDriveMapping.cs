@@ -71,16 +71,17 @@ namespace NetworkShareMapper
                         {
                             myLogWriter.LogWrite("An unknown error occured.\nException: " + e.ToString(), 3);
                         }
-                    retryCount--;
                 } else
                 {
-
+                    if (retryCount == 0)
+                        myLogWriter.LogWrite("Will now to to sleep");
                     if (updateTask.Status == TaskStatus.Created)
                     {
                         updateTask.Start();
                     }
                    
                 }
+                retryCount--;
                 Thread.Sleep(sleepTime);
             }
         }

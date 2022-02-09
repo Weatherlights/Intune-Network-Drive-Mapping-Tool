@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj": {}
+    "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj": {
+    "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+        "projectUniqueName": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
         "projectName": "NetworkShareMapper",
-        "projectPath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
-        "packagesPath": "C:\\Users\\hauke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\obj\\",
+        "projectPath": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+        "packagesPath": "C:\\Users\\HaukeGötze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hauke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HaukeGötze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
