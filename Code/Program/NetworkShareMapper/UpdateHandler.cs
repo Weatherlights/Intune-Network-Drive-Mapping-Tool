@@ -12,6 +12,7 @@ namespace NetworkShareMapper
     {
         private StoreContext context = null;
         private LogWriter myLogWriter = null;
+        IReadOnlyList<StorePackageUpdate> storePackageUpdates = null;
 
         public UpdateHandler()
         {
@@ -34,9 +35,10 @@ namespace NetworkShareMapper
 
         }
 
-        public async void InstallUpdate()
+        public async Task<bool> SearchAndDownloadUpdates()
         {
-            myLogWriter.LogWrite("Begin InstallUpdate");
+            myLogWriter.LogWrite("Begin SearchAndDownloadUpdates");
+            bool updateReadyToInstall = false;
             try
             {
                 if (context == null)
@@ -44,19 +46,70 @@ namespace NetworkShareMapper
                     context = StoreContext.GetDefault();
                 }
 
-                IReadOnlyList<StorePackageUpdate> storePackageUpdates =
-                   await context.GetAppAndOptionalStorePackageUpdatesAsync();
+                storePackageUpdates =
+                    await context.GetAppAndOptionalStorePackageUpdatesAsync();
                 myLogWriter.LogWrite("Search for Updates finished. Found " + storePackageUpdates.Count + " Updates.");
-                // Start the silent installation of the packages. Because the packages have already
-                // been downloaded in the previous method, the following line of code just installs
-                // the downloaded packages.
+
                 if (storePackageUpdates.Count > 0)
                 {
                     if (!context.CanSilentlyDownloadStorePackageUpdates)
                     {
                         myLogWriter.LogWrite("CanSilentlyDownloadStorePackageUpdates returned false. Will abort.", 2);
-                        return;
+                        updateReadyToInstall = false;
                     }
+                    else
+                    {
+                        myLogWriter.LogWrite("Will now download updates.");
+
+                        StorePackageUpdateResult downloadResult =
+                               await context.TrySilentDownloadStorePackageUpdatesAsync(storePackageUpdates);
+
+                        switch (downloadResult.OverallState)
+                        {
+                            case StorePackageUpdateState.Completed:
+                                myLogWriter.LogWrite("Download has been finished successfully.");
+                                updateReadyToInstall = true;
+                                break;
+                            case StorePackageUpdateState.Canceled:
+                                myLogWriter.LogWrite("Update canceled: Canceled by the user.", 2);
+                                updateReadyToInstall = false;
+                                break;
+                            case StorePackageUpdateState.ErrorLowBattery:
+                                myLogWriter.LogWrite("Update canceled: Battery level to low to download update.", 2);
+                                updateReadyToInstall = false;
+                                break;
+                            case StorePackageUpdateState.ErrorWiFiRecommended:
+                                myLogWriter.LogWrite("Update canceled: The user is recommended to use a wifi to update.", 2);
+                                updateReadyToInstall = false;
+                                break;
+                            case StorePackageUpdateState.ErrorWiFiRequired:
+                                myLogWriter.LogWrite("Update canceled: A wifi connection is required to perform the update.", 2);
+                                updateReadyToInstall = false;
+                                break;
+                            case StorePackageUpdateState.OtherError:
+                                myLogWriter.LogWrite("Update canceled: Unknown error.", 3);
+                                updateReadyToInstall = false;
+                                break;
+                            default:
+                                updateReadyToInstall = false;
+                                break;
+                        }
+                    }
+                }
+            } catch (Exception e)
+            {
+                myLogWriter.LogWrite("Update search could not be completed. Exception: " + e.ToString(), 2);
+            }
+            return updateReadyToInstall;
+        }
+
+
+        public async Task<bool> InstallUpdate()
+        {
+            bool updatesInstalledSuccessfully = false;
+            myLogWriter.LogWrite("Begin InstallUpdate");
+            try
+            {
                     SetRestartOnUpdate();
                     myLogWriter.LogWrite("Update is now installing.");
                     StorePackageUpdateResult downloadResult =
@@ -64,33 +117,41 @@ namespace NetworkShareMapper
                     myLogWriter.LogWrite("Installation of updates completed.");
                     switch (downloadResult.OverallState)
                     {
-                        // If the user cancelled the installation or you can't perform the installation  
-                        // for some other reason, try again later. The RetryInstallLater method is not  
-                        // implemented in this example, you should implement it as needed for your own app.
+                        case StorePackageUpdateState.Completed:
+                            myLogWriter.LogWrite("Update installed successfully.", 1);
+                        updatesInstalledSuccessfully = true;
+                        break;
                         case StorePackageUpdateState.Canceled:
                             myLogWriter.LogWrite("Update was canceled by the user.", 2);
-                            return;
+                        updatesInstalledSuccessfully = false;
+                        break;
                         case StorePackageUpdateState.ErrorWiFiRequired:
                             myLogWriter.LogWrite("No wifi connection available.", 2);
-                            return;
-                        case StorePackageUpdateState.ErrorWiFiRecommended:
+                        updatesInstalledSuccessfully = false;
+                        break;
+                    case StorePackageUpdateState.ErrorWiFiRecommended:
                             myLogWriter.LogWrite("A wifi connection is recommended.", 2);
-                            return;
-                        case StorePackageUpdateState.ErrorLowBattery:
-                            myLogWriter.LogWrite("Update failed because of low battery.", 2);
-                            return;
-                        case StorePackageUpdateState.OtherError:
+                        updatesInstalledSuccessfully = false;
+                        break;
+                    case StorePackageUpdateState.ErrorLowBattery:
+                        updatesInstalledSuccessfully = false;
+                        break;
+                    case StorePackageUpdateState.OtherError:
                             myLogWriter.LogWrite("Update failed because of unknown error.", 3);
-                            return;
-                        default:
+                        updatesInstalledSuccessfully = false;
+                        break;
+                    default:
                             myLogWriter.LogWrite("Update installed successfully.", 1);
-                            break;
-                    }
+                        updatesInstalledSuccessfully = false;
+                        break;
+
                 }
+                
             } catch (Exception e)
             {
                 myLogWriter.LogWrite("Update search could not be completed. Exception: " + e.ToString(), 2);
             }
+            return updatesInstalledSuccessfully;
 
         }
     }
