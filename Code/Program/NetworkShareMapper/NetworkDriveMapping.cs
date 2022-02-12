@@ -51,7 +51,6 @@ namespace NetworkShareMapper
 
         public void Execute()
         {
-            int updateRuntime = 0;
             DateTime dateLastUpdate = DateTime.Now;
             NetworkChangeDetector myNetworkChangeDetector = new NetworkChangeDetector();
             myLogWriter.LogWrite("Initialized NetworkChangeDetector");
@@ -119,7 +118,6 @@ namespace NetworkShareMapper
                     }
 
                 }
-                updateRuntime += sleepTime;
                 retryCount--;
 
             }
