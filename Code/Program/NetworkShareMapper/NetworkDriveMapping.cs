@@ -106,15 +106,16 @@ namespace NetworkShareMapper
                                 shouldRun = false;
                                 myLogWriter.LogWrite("Will now restart Intune Network Drive Mapping to install updates.", 1);
                             }
-
                     }
                     DateTime currentDate = DateTime.Now;
                     long elapsedTicks = currentDate.Ticks - dateLastUpdate.Ticks;
                     TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
 
-                    if (elapsedSpan.TotalSeconds >= updateInterval && updateInterval > 60)
+                    if ((elapsedSpan.TotalSeconds >= updateInterval) && (updateInterval > 60))
                     {
                         dateLastUpdate = DateTime.Now;
+                        installUpdateTask = null;
+                        searchUpdateTask = null;
                     }
 
                 }
