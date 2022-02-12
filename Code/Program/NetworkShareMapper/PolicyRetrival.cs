@@ -13,7 +13,7 @@ namespace NetworkShareMapper
     {
         private string policyLocation = "Software\\Policies\\weatherlights.com\\NetworkDriveMapping";
         private RegistryKey policyStoreKey = null;
-        private RegistryKey policyPolicyKey = null;
+
 
         public PolicyRetrival()
         {
@@ -28,22 +28,24 @@ namespace NetworkShareMapper
 
         public NetworkDriveMappingPolicy GetPolicyByName(string name)
         {
-            if ( policyPolicyKey == null )
-                policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies");
-            NetworkDriveMappingPolicy policy = new NetworkDriveMappingPolicy();
-            if (policyPolicyKey.GetValueNames().Contains(name) )
+            NetworkDriveMappingPolicy policy = null;
+            using (RegistryKey policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies"))
             {
-                string myPolicyValue = (string)policyPolicyKey.GetValue(name);
-                string[] myPolicyValueArray = myPolicyValue.Split(';');
-                if (myPolicyValueArray.Length > 1)
+                policy = new NetworkDriveMappingPolicy();
+                if (policyPolicyKey.GetValueNames().Contains(name))
                 {
-                    policy.driveLetter = myPolicyValueArray[0];
-                    string myPathWithVariables = myPolicyValueArray[1];
-                    policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
-                    if (myPolicyValueArray.Length > 3)
+                    string myPolicyValue = (string)policyPolicyKey.GetValue(name);
+                    string[] myPolicyValueArray = myPolicyValue.Split(';');
+                    if (myPolicyValueArray.Length > 1)
                     {
-                        policy.Username = myPolicyValueArray[2];
-                        policy.Password = myPolicyValueArray[3];
+                        policy.driveLetter = myPolicyValueArray[0];
+                        string myPathWithVariables = myPolicyValueArray[1];
+                        policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
+                        if (myPolicyValueArray.Length > 3)
+                        {
+                            policy.Username = myPolicyValueArray[2];
+                            policy.Password = myPolicyValueArray[3];
+                        }
                     }
                 }
             }
@@ -129,6 +131,21 @@ namespace NetworkShareMapper
             catch (Exception e)
             {
                 return 15;
+            }
+        }
+
+        public int getUpdateInterval()
+        {
+            try
+            {
+                if (TestRegistryKeyValue("UpdateInterval"))
+                    return (int)policyStoreKey.GetValue("UpdateInterval");
+                else
+                    return 10800;
+            }
+            catch (Exception e)
+            {
+                return 10800;
             }
         }
 

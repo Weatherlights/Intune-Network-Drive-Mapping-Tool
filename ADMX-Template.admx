@@ -32,6 +32,13 @@
         <decimal id="RefreshInterval" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="RefreshInterval" required="true" minValue="1" maxValue="100000" />
       </elements>
     </policy>
+    <policy name="UpdateInterval" class="User" displayName="$(string.POL_RefreshInterval)" presentation="$(presentation.POL_RefreshInterval)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="UpdateInterval">
+      <parentCategory ref="Configuration" />
+      <supportedOn ref="windows:SUPPORTED_WindowsVista" />
+      <elements>
+        <decimal id="UpdateInterval" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="UpdateInterval" required="true" minValue="0" maxValue="100000" />
+      </elements>
+    </policy>
     <policy name="MapPersistent" class="User" displayName="$(string.POL_BF4F2902_5773_409D_93BC_F3C585D53ADF)" explainText="$(string.POL_PERSISTENT_Help)" key="Software\Policies\weatherlights.com\NetworkDriveMapping" valueName="MapPersistent">
       <parentCategory ref="Configuration" />
       <supportedOn ref="windows:SUPPORTED_WindowsVista" />

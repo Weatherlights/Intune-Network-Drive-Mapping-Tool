@@ -51,7 +51,8 @@ namespace NetworkShareMapper
 
         public void Execute()
         {
-
+            int updateRuntime = 0;
+            DateTime dateLastUpdate = DateTime.Now;
             NetworkChangeDetector myNetworkChangeDetector = new NetworkChangeDetector();
             myLogWriter.LogWrite("Initialized NetworkChangeDetector");
 
@@ -61,10 +62,11 @@ namespace NetworkShareMapper
             myLogWriter.LogWrite("Initialized UpdateTask");
             int retryCount = 0;
             bool shouldRun = true;
+            int updateInterval = myPolicyRetrival.getUpdateInterval();
             while (shouldRun)
             {
-                int sleepTime = myPolicyRetrival.getRefreshInterval(); ;
-
+                int sleepTime = myPolicyRetrival.getRefreshInterval();
+                
                 if (myPolicyRetrival.isNetworkTestEnabled())
                 {
                     if (myNetworkChangeDetector.CheckNetworkChange())
@@ -89,7 +91,7 @@ namespace NetworkShareMapper
                         myLogWriter.LogWrite("Will now go to sleep.");
 
                     Thread.Sleep(sleepTime);
-                    bool updatesReadyToInstall = false; ;
+                    bool updatesReadyToInstall = false;
                     if (searchUpdateTask == null)
                         searchUpdateTask = myUpdateHandler.SearchAndDownloadUpdates();
                     if (searchUpdateTask.IsCompleted)
@@ -107,9 +109,17 @@ namespace NetworkShareMapper
                             }
 
                     }
+                    DateTime currentDate = DateTime.Now;
+                    long elapsedTicks = currentDate.Ticks - dateLastUpdate.Ticks;
+                    TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+
+                    if (elapsedSpan.TotalSeconds >= updateInterval && updateInterval > 60)
+                    {
+                        dateLastUpdate = DateTime.Now;
+                    }
 
                 }
-
+                updateRuntime += sleepTime;
                 retryCount--;
 
             }

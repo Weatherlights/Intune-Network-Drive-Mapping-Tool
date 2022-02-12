@@ -29,3 +29,4 @@ C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\Netwo
 C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.CoreCompileInputs.cache
 C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.exe
 C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.pdb
+C:\Users\HaukeGötze\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Debug\NetworkShareMapper.csproj.AssemblyReference.cache
