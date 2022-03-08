@@ -95,19 +95,33 @@ namespace NetworkShareMapper
 
             //If Drive is already mapped disconnect the current 
             //mapping before adding the new mapping
+            bool mapDrive = false;
             if (IsDriveMapped(sDriveLetter))
             {
                 if (GetMappedDriveLocation(sDriveLetter) != sNetworkPath)
                 {
-                    myLogWriter.LogWrite("The mapped drive on " + sDriveLetter + " is not " + sNetworkPath + ". Will reconnect.");
+                    myLogWriter.LogWrite("The mapped drive on " + sDriveLetter + " is not " + sNetworkPath + ". Will disconnect.");
                     DisconnectNetworkDrive(sDriveLetter, true);
+                    mapDrive = true;
                 }
             } else
             {
-                myLogWriter.LogWrite("Will now connect " + sDriveLetter + " to " + sNetworkPath);
+                mapDrive = true;
+                
             }
 
-            WNetAddConnection2(ref oNetworkResource, Username, Password, 0);
+            if (mapDrive == true)
+            {
+                myLogWriter.LogWrite("Will now connect " + sDriveLetter + " to " + sNetworkPath);
+                int connectionResult = WNetAddConnection2(ref oNetworkResource, Username, Password, 0);
+
+                if (connectionResult == 0)
+                    myLogWriter.LogWrite("Drive mapping completed successfully.");
+                else if ( connectionResult == 85 )
+                    myLogWriter.LogWrite("Drive was allready mapped",1);
+                else
+                    myLogWriter.LogWrite("Drive mapping failed with code: " + connectionResult, 2);
+            }
         }
 
         public static int DisconnectNetworkDrive(string sDriveLetter, bool bForceDisconnect)

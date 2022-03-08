@@ -962,24 +962,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HaukeGötze\\.nuget\\packages\\": {},
+    "C:\\Users\\hauke\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+      "projectUniqueName": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
       "projectName": "NetworkShareMapper",
-      "projectPath": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
-      "packagesPath": "C:\\Users\\HaukeGötze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HaukeGötze\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\obj\\",
+      "projectPath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\NetworkShareMapper.csproj",
+      "packagesPath": "C:\\Users\\hauke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hauke\\GitHub\\Intune-Network-Drive-Mapping-Tool\\Code\\Program\\NetworkShareMapper\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\HaukeGötze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hauke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
