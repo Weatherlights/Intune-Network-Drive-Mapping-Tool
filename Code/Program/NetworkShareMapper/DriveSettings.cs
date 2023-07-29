@@ -113,7 +113,7 @@ namespace NetworkShareMapper
             if (mapDrive == true)
             {
                 myLogWriter.LogWrite("Will now connect " + sDriveLetter + " to " + sNetworkPath);
-                int connectionResult = WNetAddConnection2(ref oNetworkResource, Username, Password, 0);
+                int connectionResult = WNetAddConnection2(ref oNetworkResource, Password, Username, 0);
 
                 if (connectionResult == 0)
                     myLogWriter.LogWrite("Drive mapping completed successfully.");
