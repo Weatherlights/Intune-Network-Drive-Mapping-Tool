@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\Release\
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\
 NetworkShareMapper
 none
 false
@@ -12,7 +12,7 @@ TRACE
 
 1-1862082461
 
-111075033338
+12-753549638
 2091161035938
 UnconfiguredNoticeWindow.xaml;
 

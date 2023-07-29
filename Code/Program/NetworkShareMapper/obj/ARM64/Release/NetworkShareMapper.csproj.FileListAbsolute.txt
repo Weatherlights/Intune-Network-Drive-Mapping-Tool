@@ -1,0 +1,13 @@
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\ARM64\Release\NetworkShareMapper.exe.config
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\ARM64\Release\NetworkShareMapper.exe
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\bin\ARM64\Release\NetworkShareMapper.pdb
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.csproj.AssemblyReference.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.csproj.SuggestedBindingRedirects.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\UnconfiguredNoticeWindow.g.cs
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper_MarkupCompile.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper_MarkupCompile.lref
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\UnconfiguredNoticeWindow.baml
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.g.resources
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.csproj.CoreCompileInputs.cache
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.exe
+C:\Users\hauke\GitHub\Intune-Network-Drive-Mapping-Tool\Code\Program\NetworkShareMapper\obj\ARM64\Release\NetworkShareMapper.pdb
