@@ -26,6 +26,12 @@ namespace NetworkShareMapper
             return myPolicyKey.GetValueNames();
         }
 
+        public string[] retrivePolicyNames2()
+        {
+            RegistryKey myPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2");
+            return myPolicyKey.GetSubKeyNames();
+        }
+
         public NetworkDriveMappingPolicy GetPolicyByName(string name)
         {
             NetworkDriveMappingPolicy policy = null;
@@ -50,7 +56,26 @@ namespace NetworkShareMapper
                 }
             }
             return policy;
-            
+        }
+
+        public NetworkDriveMappingPolicy GetPolicyByName2(string name)
+        {
+            NetworkDriveMappingPolicy policy = null;
+            using (RegistryKey policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2\\" + name))
+            {
+               
+                
+                policy = new NetworkDriveMappingPolicy();
+
+                policy.driveLetter = name;
+                policy.uncPath = (string)policyPolicyKey.GetValue("Path");
+                if ( policyPolicyKey.GetValueNames().Contains("Username") && policyPolicyKey.GetValueNames().Contains("Password"))
+                {
+                    policy.Username = (string)policyPolicyKey.GetValue("Username");
+                    policy.Password = (string)policyPolicyKey.GetValue("Password");
+                }
+            }
+            return policy;
         }
 
         private bool TestRegistryKeyValue(string AttributeName)
