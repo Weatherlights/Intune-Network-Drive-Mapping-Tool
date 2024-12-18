@@ -20,7 +20,30 @@ namespace NetworkShareMapper
             policyStoreKey = Registry.CurrentUser.OpenSubKey(policyLocation, false);
         }
 
-        public string[] retrivePolicyNames()
+        public List<NetworkDriveMappingPolicy> Policies
+        {
+            get
+            {
+                List<NetworkDriveMappingPolicy> policies = new List<NetworkDriveMappingPolicy>();
+                if (this.retrivePolicyNames2() != null) // This is the new configuration which is more flexible. If it is used it is prefered over the old configuration.
+                {
+                    foreach (string policyName in this.retrivePolicyNames2())
+                    {
+                        policies.Add(this.GetPolicyByName2(policyName));
+                    }
+                }
+                else if (this.retrivePolicyNames1() != null)
+                {
+                    foreach (string policyName in this.retrivePolicyNames1())
+                    {
+                        policies.Add(this.GetPolicyByName1(policyName));
+                    }
+                }
+                return policies;
+            }
+        }
+
+        private string[] retrivePolicyNames1()
         {
             RegistryKey myPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies");
             if (myPolicyKey != null)
@@ -32,7 +55,7 @@ namespace NetworkShareMapper
             }
         }
 
-        public string[] retrivePolicyNames2()
+        private string[] retrivePolicyNames2()
         {
             RegistryKey myPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2");
             if (myPolicyKey != null)
@@ -45,7 +68,7 @@ namespace NetworkShareMapper
             }
         }
 
-        public NetworkDriveMappingPolicy GetPolicyByName(string name)
+        private NetworkDriveMappingPolicy GetPolicyByName1(string name)
         {
             NetworkDriveMappingPolicy policy = null;
             using (RegistryKey policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies"))
@@ -71,7 +94,7 @@ namespace NetworkShareMapper
             return policy;
         }
 
-        public NetworkDriveMappingPolicy GetPolicyByName2(string name)
+        private NetworkDriveMappingPolicy GetPolicyByName2(string name)
         {
             NetworkDriveMappingPolicy policy = null;
             using (RegistryKey policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2\\" + name))

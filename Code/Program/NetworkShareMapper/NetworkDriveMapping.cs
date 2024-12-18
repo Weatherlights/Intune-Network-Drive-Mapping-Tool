@@ -27,21 +27,8 @@ namespace NetworkShareMapper
                 try
                 {
                     bool isMapPersistent = myPolicyRetrival.isMapPersistent();
-                    List<NetworkDriveMappingPolicy> policies = new List<NetworkDriveMappingPolicy>();
-                    if (myPolicyRetrival.retrivePolicyNames2() != null) // This is the new configuration which is more flexible. If it is used it is prefered over the old configuration.
-                    {
-                        foreach (string policyName in myPolicyRetrival.retrivePolicyNames2())
-                        {
-                            policies.Add(myPolicyRetrival.GetPolicyByName2(policyName));
-                        }
-                    }
-                    else if (myPolicyRetrival.retrivePolicyNames() != null)
-                    {
-                        foreach (string policyName in myPolicyRetrival.retrivePolicyNames())
-                        {
-                            policies.Add(myPolicyRetrival.GetPolicyByName(policyName));
-                        }
-                    }
+                    List<NetworkDriveMappingPolicy> policies = myPolicyRetrival.Policies;
+                   
                     foreach (NetworkDriveMappingPolicy policy in policies)
                     {
                         if (policy.driveLetter != null && policy.uncPath != null)
