@@ -105,8 +105,10 @@ namespace NetworkShareMapper
                 policy.uncPath = (string)policyPolicyKey.GetValue("Path");
                 if ( policyPolicyKey.GetValueNames().Contains("Username") && policyPolicyKey.GetValueNames().Contains("Password"))
                 {
-                    policy.Username = (string)policyPolicyKey.GetValue("Username");
-                    policy.Password = (string)policyPolicyKey.GetValue("Password");
+                    if((string)policyPolicyKey.GetValue("Username") != "" )
+                        policy.Username = (string)policyPolicyKey.GetValue("Username");
+                    if ((string)policyPolicyKey.GetValue("Password") != "")
+                        policy.Password = (string)policyPolicyKey.GetValue("Password");
                 }
             }
             return policy;
