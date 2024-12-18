@@ -27,20 +27,34 @@ namespace NetworkShareMapper
                 try
                 {
                     bool isMapPersistent = myPolicyRetrival.isMapPersistent();
-                    foreach (string policyName in myPolicyRetrival.retrivePolicyNames())
+                    List<NetworkDriveMappingPolicy> policies = new List<NetworkDriveMappingPolicy>();
+                    if (myPolicyRetrival.retrivePolicyNames2() != null) // This is the new configuration which is more flexible. If it is used it is prefered over the old configuration.
                     {
-                        NetworkDriveMappingPolicy policy = myPolicyRetrival.GetPolicyByName(policyName);
+                        foreach (string policyName in myPolicyRetrival.retrivePolicyNames2())
+                        {
+                            policies.Add(myPolicyRetrival.GetPolicyByName2(policyName));
+                        }
+                    }
+                    else if (myPolicyRetrival.retrivePolicyNames() != null)
+                    {
+                        foreach (string policyName in myPolicyRetrival.retrivePolicyNames())
+                        {
+                            policies.Add(myPolicyRetrival.GetPolicyByName(policyName));
+                        }
+                    }
+                    foreach (NetworkDriveMappingPolicy policy in policies)
+                    {
                         if (policy.driveLetter != null && policy.uncPath != null)
-                            try
-                            {
-                                DriveSettings.MapNetworkDrive(policy.driveLetter, policy.uncPath, isMapPersistent, policy.Username, policy.Password);
-                                //myLogWriter.LogWrite("Mapped networkdrive " + policy.driveLetter + " to " + policy.uncPath);
-                            }
-                            catch (Exception e)
-                            {
-                                myLogWriter.LogWrite("Failed to map networkdrive " + policy.driveLetter + " to " + policy.uncPath + "\nException: " + e.ToString(), 2);
-                                // do nothing
-                            }
+                        try
+                        {
+                            DriveSettings.MapNetworkDrive(policy.driveLetter, policy.uncPath, isMapPersistent, policy.Username, policy.Password);
+                            //myLogWriter.LogWrite("Mapped networkdrive " + policy.driveLetter + " to " + policy.uncPath);
+                        }
+                        catch (Exception e)
+                        {
+                            myLogWriter.LogWrite("Failed to map networkdrive " + policy.driveLetter + " to " + policy.uncPath + "\nException: " + e.ToString(), 2);
+                            // do nothing
+                        }
                     }
                 }
                 catch (Exception e)

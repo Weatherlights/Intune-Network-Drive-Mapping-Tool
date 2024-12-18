@@ -23,13 +23,26 @@ namespace NetworkShareMapper
         public string[] retrivePolicyNames()
         {
             RegistryKey myPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies");
-            return myPolicyKey.GetValueNames();
+            if (myPolicyKey != null)
+            {
+                return myPolicyKey.GetValueNames();
+            } else
+            {
+                return null;
+            }
         }
 
         public string[] retrivePolicyNames2()
         {
             RegistryKey myPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2");
-            return myPolicyKey.GetSubKeyNames();
+            if (myPolicyKey != null)
+            {
+                return myPolicyKey.GetSubKeyNames();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public NetworkDriveMappingPolicy GetPolicyByName(string name)
@@ -63,8 +76,6 @@ namespace NetworkShareMapper
             NetworkDriveMappingPolicy policy = null;
             using (RegistryKey policyPolicyKey = Registry.CurrentUser.OpenSubKey(policyLocation + "\\Policies2\\" + name))
             {
-               
-                
                 policy = new NetworkDriveMappingPolicy();
 
                 policy.driveLetter = name;
