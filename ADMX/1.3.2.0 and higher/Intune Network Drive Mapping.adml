@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions" revision="1.3.2.0" schemaVersion="1.0">
+  <displayName>WinGet-AutoUpdate-Configurator</displayName>
+  <description>WinGet-AutoUpdate-Configurator</description>
+  <resources>
+    <stringTable>
+      <string id="IntuneNetworkShareMapper">Intune Network Drive Mapping</string>
+      <string id="Configuration">Configuration</string>
+      <string id="Drives">Drives</string>
+      <string id="SupportedOn">Windows 10 and Windows 11</string>
+      <string id="Enabled">Enable Intune Network Drive Mapping</string>
+      <string id="Enabled_Help">This enables Intune Network Drive Mapping.
+
+Configurations will only be applied when this configuration is set to Enabled.
+</string>
+      <string id="RefreshInterval">Refresh interval</string>
+      <string id="RefreshInterval_Help">Sets the refresh interval in ms. Default is 10000.</string>
+      <string id="MapPersistent">Map persistent</string>
+      <string id="MapPersistent_Help">Specifies if the network drive should be mapped persistence. You should not use this setting unless you have issues.</string>
+      <string id="UpdateInterval">Update interval</string>
+      <string id="UpdateInterval_Help">Configures how often Intune Network Drive Mapping will check for updates (in seconds). Default ist 10800.</string>
+      
+<string id="Drive_D_DisplayName">Drive D</string>
+<string id="Drive_D_ExplainText">Maps network drive D with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_E_DisplayName">Drive E</string>
+<string id="Drive_E_ExplainText">Maps network drive E with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_F_DisplayName">Drive F</string>
+<string id="Drive_F_ExplainText">Maps network drive F with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_G_DisplayName">Drive G</string>
+<string id="Drive_G_ExplainText">Maps network drive G with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_H_DisplayName">Drive H</string>
+<string id="Drive_H_ExplainText">Maps network drive H with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_I_DisplayName">Drive I</string>
+<string id="Drive_I_ExplainText">Maps network drive I with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_J_DisplayName">Drive J</string>
+<string id="Drive_J_ExplainText">Maps network drive J with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_K_DisplayName">Drive K</string>
+<string id="Drive_K_ExplainText">Maps network drive K with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_L_DisplayName">Drive L</string>
+<string id="Drive_L_ExplainText">Maps network drive L with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_M_DisplayName">Drive M</string>
+<string id="Drive_M_ExplainText">Maps network drive M with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_N_DisplayName">Drive N</string>
+<string id="Drive_N_ExplainText">Maps network drive N with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_O_DisplayName">Drive O</string>
+<string id="Drive_O_ExplainText">Maps network drive O with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_P_DisplayName">Drive P</string>
+<string id="Drive_P_ExplainText">Maps network drive P with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_Q_DisplayName">Drive Q</string>
+<string id="Drive_Q_ExplainText">Maps network drive Q with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_R_DisplayName">Drive R</string>
+<string id="Drive_R_ExplainText">Maps network drive R with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_S_DisplayName">Drive S</string>
+<string id="Drive_S_ExplainText">Maps network drive S with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_T_DisplayName">Drive T</string>
+<string id="Drive_T_ExplainText">Maps network drive T with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_U_DisplayName">Drive U</string>
+<string id="Drive_U_ExplainText">Maps network drive U with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_V_DisplayName">Drive V</string>
+<string id="Drive_V_ExplainText">Maps network drive V with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_W_DisplayName">Drive W</string>
+<string id="Drive_W_ExplainText">Maps network drive W with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_X_DisplayName">Drive X</string>
+<string id="Drive_X_ExplainText">Maps network drive X with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_Y_DisplayName">Drive Y</string>
+<string id="Drive_Y_ExplainText">Maps network drive Y with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+
+
+<string id="Drive_Z_DisplayName">Drive Z</string>
+<string id="Drive_Z_ExplainText">Maps network drive Z with the configured path.
+
+Provide a username and password only if authentication should be done with a dedicated user. Do not supply any values if passthrough authentication should be used (recommended).</string>
+    </stringTable>
+    <presentationTable>
+      <presentation id="RefreshInterval">
+        <decimalTextBox  refId="RefreshInterval">
+          <label>Refresh interval</label>
+          <defaultValue>10000</defaultValue>
+        </decimalTextBox >
+      </presentation>
+      <presentation id="UpdateInterval">
+        <decimalTextBox  refId="UpdateInterval">
+          <label>Update interval</label>
+          <defaultValue>10800</defaultValue>
+        </decimalTextBox >
+      </presentation>
+      
+<presentation id="Drive_D_Presentation">
+    <textBox refId="Drive_D_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_D_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_D_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_E_Presentation">
+    <textBox refId="Drive_E_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_E_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_E_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_F_Presentation">
+    <textBox refId="Drive_F_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_F_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_F_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_G_Presentation">
+    <textBox refId="Drive_G_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_G_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_G_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_H_Presentation">
+    <textBox refId="Drive_H_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_H_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_H_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_I_Presentation">
+    <textBox refId="Drive_I_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_I_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_I_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_J_Presentation">
+    <textBox refId="Drive_J_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_J_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_J_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_K_Presentation">
+    <textBox refId="Drive_K_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_K_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_K_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_L_Presentation">
+    <textBox refId="Drive_L_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_L_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_L_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_M_Presentation">
+    <textBox refId="Drive_M_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_M_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_M_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_N_Presentation">
+    <textBox refId="Drive_N_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_N_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_N_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_O_Presentation">
+    <textBox refId="Drive_O_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_O_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_O_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_P_Presentation">
+    <textBox refId="Drive_P_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_P_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_P_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_Q_Presentation">
+    <textBox refId="Drive_Q_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Q_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Q_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_R_Presentation">
+    <textBox refId="Drive_R_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_R_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_R_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_S_Presentation">
+    <textBox refId="Drive_S_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_S_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_S_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_T_Presentation">
+    <textBox refId="Drive_T_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_T_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_T_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_U_Presentation">
+    <textBox refId="Drive_U_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_U_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_U_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_V_Presentation">
+    <textBox refId="Drive_V_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_V_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_V_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_W_Presentation">
+    <textBox refId="Drive_W_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_W_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_W_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_X_Presentation">
+    <textBox refId="Drive_X_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_X_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_X_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_Y_Presentation">
+    <textBox refId="Drive_Y_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Y_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Y_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+
+
+<presentation id="Drive_Z_Presentation">
+    <textBox refId="Drive_Z_Path"><label>Path</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Z_Username"><label>Username</label><defaultValue></defaultValue></textBox>
+    <textBox refId="Drive_Z_Password"><label>Password</label><defaultValue></defaultValue></textBox>
+</presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
