@@ -102,7 +102,8 @@ namespace NetworkShareMapper
                 policy = new NetworkDriveMappingPolicy();
 
                 policy.driveLetter = name;
-                policy.uncPath = (string)policyPolicyKey.GetValue("Path");
+                string myPathWithVariables = (string)policyPolicyKey.GetValue("Path");
+                policy.uncPath = Environment.ExpandEnvironmentVariables(myPathWithVariables);
                 if ( policyPolicyKey.GetValueNames().Contains("Username") && policyPolicyKey.GetValueNames().Contains("Password"))
                 {
                     if((string)policyPolicyKey.GetValue("Username") != "" )
