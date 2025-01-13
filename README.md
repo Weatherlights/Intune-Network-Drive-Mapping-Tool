@@ -12,7 +12,7 @@ Map on-premises network shares with Intune and the Microsoft Store for Business.
 
 ## Where do I get the tool?
 
-<a href="https://businessstore.microsoft.com/store/details/networkdrivemapping/9NWVZR414XS6"><img src="https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png" alt="Get it from Microsoft" width="280"/></a>
+<a href="https://apps.microsoft.com/detail/9nwvzr414xs6"><img src="https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png" alt="Get it from Microsoft" width="280"/></a>
 
 ### How do I configure it?
 
