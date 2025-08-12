@@ -1,6 +1,8 @@
 # Intune-Network-Drive-Mapping-Tool
 Map on-premises network shares with Intune and the Microsoft Store for Business.
 
+Please note that the Icon is not under MIT license but licensed by <a href="https://www.iconfinder.com/icons/3158758/component_computer_hardware_pc_printer_icon">Smashicons</a>. To use it in your projects/forks a dedicated license is required!
+
 ## Features
 - Maps any network path to a drive letter
 - No error messages when using Autoconnect VPN
